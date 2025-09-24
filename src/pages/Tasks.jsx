@@ -150,20 +150,29 @@ const TaskForm = ({ onSave, onClose, goals }) => {
           
           <div className="form-group">
             <label>Días de repetición</label>
-            <div className="days-selector">
-              {daysOfWeek.map(day => (
-                <div 
-                  key={day}
-                  className={`day-btn ${formData.selectedDays.includes(day) ? 'selected' : ''}`}
-                  onClick={() => toggleDay(day)}
-                >
-                  {day}
-                </div>
-              ))}
+            <div className="days-selector-container">
+              <div className="days-selector">
+                {daysOfWeek.map(day => (
+                  <button
+                    key={day}
+                    type="button"
+                    className={`day-btn ${formData.selectedDays.includes(day) ? 'selected' : ''}`}
+                    onClick={() => toggleDay(day)}
+                    title={getFullDayName(day)}
+                  >
+                    {day}
+                  </button>
+                ))}
+              </div>
+              {formData.selectedDays.length > 0 && (
+                <p className="selected-days-info">
+                   {formData.selectedDays.length} día(s)
+                </p>
+              )}
             </div>
           </div>
           
-          <div className="form-actions">
+          <div className="form-actions2">
             <button type="button" className="btn btn-secondary" onClick={onClose}>
               Cancelar
             </button>
@@ -175,6 +184,19 @@ const TaskForm = ({ onSave, onClose, goals }) => {
       </div>
     </div>
   );
+};
+// Función auxiliar para nombres completos de días
+const getFullDayName = (shortDay) => {
+  const daysMap = {
+    'L': 'Lunes',
+    'M': 'Martes',
+    'X': 'Miércoles',
+    'J': 'Jueves',
+    'V': 'Viernes',
+    'S': 'Sábado',
+    'D': 'Domingo'
+  };
+  return daysMap[shortDay] || shortDay;
 };
 
 export default Tasks;

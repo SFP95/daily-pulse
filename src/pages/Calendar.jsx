@@ -5,9 +5,7 @@ const Calendar = ({ goals, currentDate, setCurrentDate }) => {
   const daysInMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0).getDate();
   const firstDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1).getDay();
   
-  // Ajustar para que la semana empiece en lunes (0=Domingo, 1=Lunes, etc.)
-  // Si firstDayOfMonth es 0 (domingo), lo convertimos a 6 para que sea el último día de la semana anterior
-  // Si es otro día, restamos 1 para que lunes=0, martes=1, etc.
+  
   const adjustedFirstDay = firstDayOfMonth === 0 ? 6 : firstDayOfMonth - 1;
   
   const days = [];
@@ -24,9 +22,7 @@ const Calendar = ({ goals, currentDate, setCurrentDate }) => {
     // Verificar si este día tiene tareas pendientes (no completadas)
     const hasPendingTasks = goals.some(goal => 
       goal.tasks && goal.tasks.some(task => {
-        // Aquí asumimos que las tareas están asociadas a fechas
-        // Si no tienes fecha en las tareas, mostramos todas las pendientes
-        return !task.completed;
+               return !task.completed;
       })
     );
     
@@ -57,9 +53,6 @@ const Calendar = ({ goals, currentDate, setCurrentDate }) => {
     goals.forEach(goal => {
       if (goal.tasks) {
         goal.tasks.forEach(task => {
-          // Mostrar solo tareas NO completadas
-          // Si las tareas tienen fecha, puedes añadir una verificación adicional:
-          // && (!task.dueDate || new Date(task.dueDate).toDateString() === today)
           if (!task.completed) {
             todayTasks.push({
               ...task,

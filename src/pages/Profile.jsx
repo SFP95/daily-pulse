@@ -1,9 +1,9 @@
 // pages/Profile.jsx
 import React from 'react';
-import { User, Target, CheckCircle, Activity, LogIn, LogOut  } from 'lucide-react';
+import { User, Target, CheckCircle, Activity, LogIn, LogOut } from 'lucide-react';
 import Settings from '../components/Settings';
 
-const Profile = ({ goals, isLoggedIn, onToggleLogin, onLogout, user }) => {
+const Profile = ({ goals, isLoggedIn, onToggleLogin, onLogout, user, currentTheme, onChangeTheme, onToggleDarkMode, isDarkMode }) => {
   const completedTasks = goals.flatMap(goal => goal.tasks || []).filter(task => task.completed).length;
   const totalTasks = goals.flatMap(goal => goal.tasks || []).length;
   const progressPercentage = totalTasks > 0 ? Math.round((completedTasks / totalTasks) * 100) : 0;
@@ -47,7 +47,12 @@ const Profile = ({ goals, isLoggedIn, onToggleLogin, onLogout, user }) => {
             </div>
           </div>
           
-          <Settings />
+          <Settings 
+            currentTheme={currentTheme}
+            onChangeTheme={onChangeTheme}
+            onToggleDarkMode={onToggleDarkMode}
+            isDarkMode={isDarkMode}
+          />
         </>
       ) : (
         <div className="not-logged-message">
@@ -55,7 +60,7 @@ const Profile = ({ goals, isLoggedIn, onToggleLogin, onLogout, user }) => {
             <User size={48} />
             <h3>Inicia sesión para continuar</h3>
             <p>Si deseas registrar tus progresos inicia sesión o regístrate</p>
-            <button className="btn btn-primary-profile" onClick={onToggleLogin}>
+            <button className="btn btn-primary" onClick={onToggleLogin}>
               <LogIn size={16} />
               Iniciar Sesión
             </button>

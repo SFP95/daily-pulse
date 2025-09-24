@@ -10,6 +10,7 @@ import { Target, Calendar as CalendarIcon, Plus, User } from 'lucide-react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from './firebase/config';
 import { loginUser, registerUser, logoutUser } from './services/authService';
+import { useTheme } from './hooks/useTheme';
 
 const App = () => {
   const [currentView, setCurrentView] = useState('goals');
@@ -23,6 +24,10 @@ const App = () => {
   const [showLogin, setShowLogin] = useState(false);
   const [showRegister, setShowRegister] = useState(false);
   const [authError, setAuthError] = useState('');
+
+  // Usar el hook de temas
+  const { isDarkMode, colorTheme, toggleDarkMode, changeColorTheme } = useTheme();
+
 
   // Observador de estado de autenticación
   useEffect(() => {
@@ -193,6 +198,9 @@ const App = () => {
           onToggleLogin={handleToggleLogin}
           onLogout={handleLogout}
           user={user}
+          currentTheme={colorTheme}
+          onChangeTheme={changeColorTheme}
+          onToggleDarkMode={toggleDarkMode}
         />;
       default:
         return <Goals 
