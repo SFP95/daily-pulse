@@ -76,8 +76,8 @@ La aplicación busca proporcionarte motivación y eliminar los posibles contrati
 ## 🚀 InstalacInstalación y Desarrolloión
 
 ### Prerrequisitos
-- Node.js 16+ instalado- 
-- Cuenta de Firebase configurada- 
+- Node.js 16+ instalado
+- Cuenta de Firebase configurada
 - Acceso a la configuración del proyecto Firebase
 
 ### Instalación Manual
