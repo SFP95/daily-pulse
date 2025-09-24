@@ -1,93 +1,89 @@
 # Daily Pulse 📊
 
-Una aplicación de visualización de datos diseñada para transformar información compleja en insights comprensibles y accionables.
+Una aplicación de visualización de Metas y tareas para conseguir pequeños obgetivos personales
 
 ---
 
 ## 🎯 Objetivo
 
-Daily Pulse tiene como objetivo democratizar el acceso a la analítica de datos, proporcionando una plataforma intuitiva que permite a usuarios de todos los niveles técnicos explorar, analizar y comprender sus datos mediante visualizaciones interactivas y personalizables.
+Daily Pulse tiene como objetivo ayudarte a marcarte metas alcanzables y mantener una rutina diaria o semanal hasta conseguir los objetivos marcados.
 
-La aplicación busca eliminar las barreras técnicas tradicionales asociadas con el análisis de datos, ofreciendo una solución integral que combina potencia analítica con simplicidad de uso.
+La aplicación busca proporcionarte motivación y eliminar los posibles contratiempos como "olvidar qué tenía que hacer" o la falta de seguimiento de tus progresos.
 
 ---
 
 ## ✨ Funciones Principales
 
-### 📈 Visualizaciones Avanzadas
-- **Gráficos interactivos**: Soporte para múltiples tipos de gráficos (barras, líneas, dispersión, áreas, etc.)  
-- **Dashboards personalizables**: Interface drag-and-drop para crear layouts personalizados  
-- **Filtros en tiempo real**: Capacidad de aplicar y combinar filtros dinámicamente  
-- **Exportación de reportes**: Generación de reportes en múltiples formatos (PDF, PNG, CSV)  
+### Gestión de Metas Personales
+- **Crear nuevas metas** con descripción, fechas límite y categorías
+- **Editar y eliminar** metas existentes de forma intuitiva
+- **Seguimiento de progreso** con indicadores visuales
+- **Organización por categorías** para mejor gestión
 
-### 🔄 Integración de Datos
-- **Múltiples fuentes de datos**: Compatibilidad con CSV, Excel, APIs REST, y bases de datos relacionales  
-- **Transformación de datos**: Herramientas integradas para limpieza y preparación de datos  
-- **Actualizaciones automáticas**: Sincronización automática con fuentes de datos externas  
-- **Validación de datos**: Mecanismos para asegurar la calidad e integridad de los datos  
+### Calendario Integrado
+- **Vista mensual** de todas tus metas y tareas programadas
+- **Visualización de tareas pendientes** por día/semana
+- **Recordatorios visuales** de fechas importantes
+- **Navegación temporal** entre diferentes periodos
 
-### 👥 Colaboración y Compartición
-- **Compartir dashboards**: Opciones de compartición pública y privada  
-- **Comentarios y anotaciones**: Funcionalidades para trabajo colaborativo en tiempo real  
-- **Control de acceso granular**: Sistema de permisos basado en roles de usuario  
-- **Historial de versiones**: Track de cambios y capacidad de revertir modificaciones  
+### Sistema de Tareas
+- **Desglose de tareas** asociadas a cada meta
+- **Crear, editar y eliminar tareas** específicas
+- **Marcado de completado** con seguimiento automático
+- **Priorización y ordenamiento** de tareas
 
-### 🔒 Seguridad y Administración
-- **Autenticación multi-factor**: Múltiples opciones de autenticación segura  
-- **Encriptación de datos**: Protección de datos en tránsito y en reposo  
-- **Auditoría de acceso**: Logs detallados de actividad del usuario  
-- **Cumplimiento normativo**: Soporte para regulaciones de protección de datos  
+### Perfil de usiario
+- **Estadísticas personales**: metas activas, tareas completadas, porcentaje de progreso global
+- **Personalización de tema**: modo claro/oscuro, colores de la aplicación
+- **Sistema de notificaciones** configurable
+- **Configuración de privacidad** y preferencias
 
----
-
-## 🏗️ Arquitectura
-
-### Componentes Principales
-- **Frontend**: Aplicación web responsive construida con React/Vue.js  
-- **Backend API**: Servicio RESTful para gestión de datos y usuarios  
-- **Motor de Visualización**: Biblioteca dedicada para renderizado de gráficos  
-- **Servicio de Datos**: Capa de abstracción para conexión con múltiples fuentes  
-- **Base de Datos**: Almacenamiento persistente para configuración y metadatos  
-
-### Tecnologías Utilizadas
-- **Frontend**: React, TypeScript, D3.js, WebGL  
-- **Backend**: Node.js, Python, PostgreSQL, Redis  
-- **Infraestructura**: Docker, Kubernetes, AWS/Azure  
-- **Monitoreo**: Prometheus, Grafana, Logstash  
+### Autenticación y Seguridad
+- **Registro y login** mediante correo electrónico
+- **Sincronización en la nube** de tus datos
+- **Protección de información** personal
+- **Sesiones seguras** con Firebase Auth
 
 ---
 
-## 📋 Requisitos del Sistema
+## 🛠️ Tecnologías Utilizadas
 
-### Requisitos Mínimos
-- **Navegador**: Chrome 90+, Firefox 88+, Safari 14+, Edge 90+  
-- **Memoria RAM**: 4 GB mínimo (8 GB recomendado)  
-- **Conectividad**: Conexión a internet estable para funcionalidades en la nube  
+### Frontend
+- React con **TypeScript**
+- React **Router** para navegación
+- **CSS Modules** para estilos componentizados
+- **Context API** para gestión de estado global
 
-### Requisitos para Instalación On-Premise
-- **Sistema Operativo**: Linux Ubuntu 18.04+, CentOS 7+, Windows Server 2019+  
-- **CPU**: 4 cores mínimo (8 cores recomendado)  
-- **Memoria**: 16 GB RAM mínimo (32 GB recomendado)  
-- **Almacenamiento**: 100 GB de espacio en disco SSD  
-- **Docker**: Versión 20.10+ y Docker Compose 1.29+  
+### Backend y Base de Datos
+- **Firebase Firestore** como base de datos en tiempo real
+- **Firebase Authentication** para gestión de usuarios
+- **Firebase Storage** para archivos multimedia (si aplica)
+
+### Librerías y Utilidades
+- **Date-fns** para manipulación de fechas
+- **React Hot Toast** para notificaciones
+- **Lucide React** para iconografía
+- **CSS Custom Properties** para temas dinámicos
+
+### Desarrollo y Deployment
+- **Vite** como tooling de desarrollo
+- **ESLint y Prettier** para calidad de código
+- **Git** para control de versiones
+- **Servicio de hosting** (Netlify/Vercel/Firebase Hosting)
 
 ---
 
-## 🚀 Instalación
+## 🚀 InstalacInstalación y Desarrolloión
 
-### Instalación Rápida con Docker
-```bash
-# Descargar la configuración de Docker Compose
-curl -O https://raw.githubusercontent.com/tu-usuario/daily-pulse/main/docker-compose.yml
-
-# Iniciar los servicios
-docker-compose up -d
-```
+### Prerrequisitos
+- Node.js 16+ instalado- 
+- Cuenta de Firebase configurada- 
+- Acceso a la configuración del proyecto Firebase
 
 ### Instalación Manual
 ```bash
 # Clonar el repositorio
-git clone https://github.com/tu-usuario/daily-pulse.git
+git clone https://github.com/SFP95/daily-pulse.git
 
 # Navegar al directorio del proyecto
 cd daily-pulse
@@ -105,122 +101,82 @@ cp .env.example .env
 npm run dev
 ```
 
-### Instalación en Kubernetes
+### Configuración de Firebase
+- Crear proyecto en Firebase Console
+- Habilitar Authentication con proveedor de Email/Password
+- Crear base de datos Firestore en modo de prueba
+- Configurar reglas de seguridad
+- Copiar configuración en el archivo .env
+
+### Variables de Entorno
 ```bash
-# Aplicar los manifiestos de Kubernetes
-kubectl apply -f k8s/namespace.yaml
-kubectl apply -f k8s/
-
-# Verificar el despliegue
-kubectl get all -n daily-pulse
+VITE_FIREBASE_API_KEY=tu_api_key
+VITE_FIREBASE_AUTH_DOMAIN=tu_proyecto.firebaseapp.com
+VITE_FIREBASE_PROJECT_ID=tu_project_id
+VITE_FIREBASE_STORAGE_BUCKET=tu_proyecto.appspot.com
+VITE_FIREBASE_MESSAGING_SENDER_ID=tu_sender_id
+VITE_FIREBASE_APP_ID=tu_app_id
 ```
-
 ---
 
-## ⚙️ Configuración
-
-### Configuración Inicial
-1. Acceder a la aplicación: Abrir [http://localhost:3000](http://localhost:3000) en el navegador  
-2. Configurar administrador: Completar el formulario de registro inicial  
-3. Conectar fuentes de datos: Configurar conexiones a bases de datos o APIs  
-4. Personalizar instancia: Ajustar configuraciones de marca y preferencias  
-
-### Configuración de Base de Datos
+## 📱 Estructura del Proyecto
 ```bash
-# Ejecutar migraciones iniciales
-npm run db:migrate
-
-# Poblar datos iniciales
-npm run db:seed
+src/
+├── components/          # Componentes reutilizables
+│   ├── ui/             # Componentes de interfaz base
+│   ├── goals/          # Componentes de metas
+│   ├── tasks/          # Componentes de tareas
+│   └── calendar/       # Componentes de calendario
+├── pages/              # Páginas principales
+├── hooks/              # Custom hooks
+├── context/            # Contextos de React
+├── services/           # Servicios (Firebase, API)
+├── utils/              # Utilidades y helpers
+├── types/              # Definiciones TypeScript
+└── styles/             # Estilos globales
 ```
 
-### Variables de Entorno Críticas
-```env
-# Configuración de Base de Datos
-DATABASE_URL=postgresql://user:password@localhost:5432/daily_pulse
-REDIS_URL=redis://localhost:6379
+###  Scripts Disponibles
+```bash
+# Desarrollo
+npm run dev           # Servidor de desarrollo
+npm run build         # Build de producción
+npm run preview       # Preview del build
 
-# Configuración de Seguridad
-JWT_SECRET=tu_clave_secreta_muy_segura_aqui
-ENCRYPTION_KEY=clave_32_caracteres_para_encriptacion
+# Calidad de código
+npm run lint          # Análisis ESLint
+npm run format        # Formateo con Prettier
 
-# Configuración de la Aplicación
-NODE_ENV=production
-API_BASE_URL=https://api.tudominio.com
-FRONTEND_URL=https://tudominio.com
+# Tests (si aplica)
+npm run test          # Ejecutar tests
 ```
-
----
-
-## 🔧 Mantenimiento
-
-### Tareas Programadas
-- **Backups automáticos**: Configurar rutina de backups de base de datos  
-- **Limpieza de logs**: Rotación automática de archivos de log  
-- **Actualizaciones**: Proceso de actualización de versiones  
-
-### Monitoreo de Salud
-- **Endpoint de salud**: `GET /health` para verificar estado del servicio  
-- **Métricas**: Endpoint `/metrics` para integración con Prometheus  
-- **Logs**: Configuración centralizada de logs para troubleshooting  
-
 ---
 
 ## 📊 Características Técnicas
 
-### Rendimiento
-- **Tiempo de carga**: < 3 segundos para dashboards complejos  
-- **Concurrencia**: Soporte para 1000+ usuarios concurrentes  
-- **Caché**: Múltiples niveles de caché para optimización  
-- **Compresión**: Compresión GZIP para transferencia de datos  
+### Rendimiento- 
+- Carga inicial optimizada con code splitting
+- Imágenes y assets comprimidos
+- Consultas eficientes a Firestore
+- Estado local para mejor responsividad
 
-### Escalabilidad
-- **Arquitectura modular**: Componentes independientes escalables horizontalmente  
-- **Balanceo de carga**: Soporte para múltiples instancias  
-- **Base de datos**: Replicación y sharding automático  
-- **CDN**: Integración con redes de distribución de contenido  
+### Experiencia de Usuario- 
+- Interfaz responsive para móvil y desktop
+- Navegación fluida sin recargas de página
+- Feedback visual inmediato en acciones
+- Tema adaptable (claro/oscuro)
 
----
-
-## 🔐 Seguridad
-
-### Medidas Implementadas
-- **Autenticación**: JWT tokens con refresh automático  
-- **Autorización**: RBAC (Role-Based Access Control)  
-- **CORS**: Configuración estricta de dominios permitidos  
-- **Rate Limiting**: Limitación de requests por usuario/IP  
-- **SQL Injection**: Prevención mediante prepared statements  
-- **XSS Protection**: Sanitización de inputs y outputs  
-
-### Cumplimiento
-- **GDPR**: Herramientas para gestión de consentimiento y datos personales  
-- **HIPAA**: Configuraciones para entornos de salud  
-- **SOC2**: Controles de seguridad auditables  
+### Seguridad- 
+- Validación de datos en frontend y backend
+- Reglas de seguridad en Firestore
+- Autenticación segura con Firebase Auth
+- Protección contra XSS y inyecciones
 
 ---
 
-## 🤝 Soporte y Comunidad
+### 📄 Licencia
 
-### Recursos Disponibles
-- **Documentación completa**: [docs.daily-pulse.com](https://docs.daily-pulse.com)  
-- **Foro comunitario**: [community.daily-pulse.com](https://community.daily-pulse.com)  
-- **Soporte técnico**: soporte@daily-pulse.com  
-- **Capacitaciones**: Programas de entrenamiento certificados  
-
-### Canal de Updates
-- **Blog oficial**: [blog.daily-pulse.com](https://blog.daily-pulse.com)  
-- **Newsletter**: Suscripción para updates mensuales  
-- **Changelog**: Registro detallado de cambios por versión  
-
----
-
-## 📄 Licencia
-
-Este proyecto está licenciado bajo la **Licencia MIT**. Ver el archivo [LICENSE](LICENSE) para detalles completos.
-
-### Dependencias de Terceros
-- Lista completa de licencias de dependencias: [LICENSES.md](LICENSES.md)  
-- Atribuciones requeridas: [ATTRIBUTIONS.md](ATTRIBUTIONS.md)  
+Distribuido bajo licencia MIT. Ver LICENSE para más información.
 
 ---
 
