@@ -154,19 +154,19 @@ npm run test          # Ejecutar tests
 
 ## 📊 Características Técnicas
 
-### Rendimiento- 
+### Rendimiento
 - Carga inicial optimizada con code splitting
 - Imágenes y assets comprimidos
 - Consultas eficientes a Firestore
 - Estado local para mejor responsividad
 
-### Experiencia de Usuario- 
+### Experiencia de Usuario
 - Interfaz responsive para móvil y desktop
 - Navegación fluida sin recargas de página
 - Feedback visual inmediato en acciones
 - Tema adaptable (claro/oscuro)
 
-### Seguridad- 
+### Seguridad
 - Validación de datos en frontend y backend
 - Reglas de seguridad en Firestore
 - Autenticación segura con Firebase Auth
